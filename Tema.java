@@ -19,9 +19,11 @@ import com.qualcomm.robotcore.util.Range;
         public void runOpMode() {
            motor_left= hardwareMap.get(DcMotor.class, "motor_left");
            motor_right= hardwareMap.get(DcMotor.class, "motor_right");
-           arm_pivot= hardwareMap.get(DcMotor.class, "arm_pivot");
-           claw= hardwareMap.get(DcMotor.class, "claw");
-       }
+           arm_pivot= hardwareMap.get(Servo.class, "arm_pivot");
+           claw= hardwareMap.get(Servo.class, "claw");
+
+        double clawOpen= 0.0;
+        double clawClosed= 0.5;
 
 
 
